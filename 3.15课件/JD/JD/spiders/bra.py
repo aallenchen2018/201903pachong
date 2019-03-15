@@ -34,6 +34,10 @@ class BraSpider(scrapy.Spider):
             #下一步请求，主要是为了获取每个产品的评论页码数
             url='https://sclub.jd.com/comment/productPageComments.action?callback=fetchJSON_comment98vv5427&productId='+productID+'&score=0&sortType=5&page=0&pageSize=10&isShadowSku=0&fold=1'
             yield scrapy.Request(url=url,callback=self.parse_page,meta={'productID':productID})
+        
+        
+
+
 
     def parse_page(self,response):
         '''

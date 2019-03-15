@@ -66,6 +66,7 @@ NEWSPIDER_MODULE = 'JD.spiders'
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'JD.pipelines.MongoPipeline': 300,
+
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
