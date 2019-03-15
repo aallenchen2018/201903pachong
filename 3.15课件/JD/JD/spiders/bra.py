@@ -50,6 +50,7 @@ class BraSpider(scrapy.Spider):
 
         results = response.text.replace('fetchJSON_comment98vv5427(', '').replace(');', '')
         results = json.loads(results)
+       
         for comment in results['comments']:
             yield self.get_item(comment)
 

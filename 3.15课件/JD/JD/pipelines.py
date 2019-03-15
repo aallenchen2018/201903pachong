@@ -8,6 +8,7 @@ import pymongo
 
 class JdPipeline(object):
     def process_item(self, item, spider):
+        
         return item
 
 class MongoPipeline(object):
