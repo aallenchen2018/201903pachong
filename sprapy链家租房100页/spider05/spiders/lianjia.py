@@ -26,13 +26,14 @@ class LianjiaSpider(scrapy.Spider):
             
             #链家的 next page元素找不到下一页的数字，所以不能采集；这里用for 循环翻页
 
-        for i in range(2,100):
+        # for i in range(2,100):
             
-            url='https://sz.lianjia.com/zufang/pg'+str(i)+'/#contentList'
+        #     url='https://sz.lianjia.com/zufang/pg'+str(i)+'/#contentList'
             
-            yield scrapy.Request(url=url,callback=self.parse)
+        #     yield scrapy.Request(url=url,callback=self.parse)
             
-
+            test=response.re.search(r'<a class="next" href="' + r(n + 1) + '" data-page="' + (n + 1) + '">(.*?)</a>'.extract_first).group(1)
+            print(test)
 
 
 
